@@ -28,7 +28,7 @@ ggplot(dropback,aes(epa)) +
        subtitle = "Weeks 1-18",
        x = "EPA",
        y = "",
-       caption = "By Robby Patterson | @rcpiv | @nflfastr") +
+       caption = "By Robby Patterson | @rcpiv_analytics | @nflfastr") +
   theme_clean()
 
 # Get plot for each QB
