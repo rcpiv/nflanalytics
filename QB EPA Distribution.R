@@ -13,19 +13,22 @@ roster = fast_scraper_roster(2021)
 dropback = pbp_2021 %>%
   filter(qb_dropback == 1, season_type == 'REG') %>%
   group_by(passer_player_name) %>%
-  filter(n() >= 50) %>%
+  filter(n() >= 100) %>%
   left_join(teams_colors_logos, by=c("posteam" = "team_abbr")) %>%
-  select(passer_player_name, epa, team_color, team_color2)
+  select(passer_player_name, epa, team_color, team_color2) %>%
+  mutate(avg_epa = mean(epa)) %>%
+  drop_na() %>%
+  arrange(desc(avg_epa))
 
 # Show distribution of EPA for all dropbacks
 ggplot(dropback,aes(epa)) +
   geom_histogram(binwidth = 0.5, aes( y = ..density..), fill = "white", color = "grey30") +
   geom_density(alpha = .2) +
-   labs(title = "QB Dropback EPA: League Wide",
-        subtitle = "Weeks 1-6",
-        x = "EPA",
-        y = "",
-        caption = "By Robby Patterson | @rcpiv | @nflfastr") +
+  labs(title = "QB Dropback EPA: League Wide",
+       subtitle = "Weeks 1-18",
+       x = "EPA",
+       y = "",
+       caption = "By Robby Patterson | @rcpiv | @nflfastr") +
   theme_clean()
 
 # Get plot for each QB
