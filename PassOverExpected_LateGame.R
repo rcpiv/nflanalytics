@@ -39,5 +39,5 @@ ggplot(POE_PR, aes(x = POE_mean, y = pass)) +
        x = 'Pass Over Expected Per Play',
        y = "Pass Success Rate",
        caption = "By Robby Patterson | @rcpiv_analytics | @nflfastr") +
-  theme_bw()
-
+  theme_clean()
+  ggsave("C:\\Users\\rcpat\\Desktop\\Personal Projects\\nflfastR\\nflanalytics\\Plots\\POEvPSR.png", width = 14, height = 9, dpi = 'retina')
