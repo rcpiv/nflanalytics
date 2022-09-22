@@ -10,3 +10,4 @@ Hi, I am Robby Patterson: avid football and data fan. This repository serves as 
 09/14/2022: Pass Over Expected when leading late: Visualization looking at how often teams throw the ball when firmly in control late in the game and their success rate doing so<br>
 09/17/2022: Blitz vs Drop 8: How do quarterbacks perform vs non-standard pass rushes? Includes viz.<br>
 09/19/2022: Weighted Team Tiers: Starting a project to create an analytic power ranking based on weekly vs season long EPA.<br>
+09/21/2022: YAC'n it up: How heavily are passing offenses driven by YAC vs pure air yards.<br>
